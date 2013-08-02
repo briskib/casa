@@ -1,0 +1,667 @@
+{
+    "arcs": [
+        {
+            "start": {
+               "lat": "-37.741667",
+                "lng": "144.55"
+            },
+            "end": {
+                "lat": "-37.85",
+                "lng": "145.05"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#423feb",
+                "weight": 1
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0, 0 -2, 0",
+                    "strokeOpacity": 1,
+                    "scale": 2
+                },
+                "offset": "0",
+                "repeat": "5px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 0,
+                "color": "#0000ff",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0,-1 0,1",
+                    "strokeOpacity": 1,
+                    "scale": 4
+                },
+                "offset": "0",
+                "repeat": "20px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path" : "M 0, 0 -2, 0, M 0, 0 2, 0",
+                    "strokeOpacity" : 1,
+                    "scale" : 2,
+                    "strokeColor" : "#f08ee1"
+                },
+                "offset": "0",
+                "repeat": "3px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.35",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-38.35",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": null,
+                "offset" : 0,
+                "repeat" : 0
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.741667",
+                "lng": "145.55"
+            },
+            "end": {
+                "lat": "-37.85",
+                "lng": "146.05"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "145.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#423feb",
+                "weight": 1
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0, 0 -2, 0",
+                    "strokeOpacity": 1,
+                    "scale": 2
+                },
+                "offset": "0",
+                "repeat": "5px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "145.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "145.5000001"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "145.83333333"
+            },
+            "line" : {
+                "opacity": 0,
+                "color": "#0000ff",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0,-1 0,1",
+                    "strokeOpacity": 1,
+                    "scale": 4
+                },
+                "offset": "0",
+                "repeat": "20px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "145.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "145.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "145.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path" : "M 0, 0 -2, 0, M 0, 0 2, 0",
+                    "strokeOpacity" : 1,
+                    "scale" : 2,
+                    "strokeColor" : "#f08ee1"
+                },
+                "offset": "0",
+                "repeat": "3px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.35",
+                "lng": "145.50"
+            },
+            "end": {
+               "lat": "-38.35",
+                "lng": "145.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "145.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": null,
+                "offset" : 0,
+                "repeat" : 0
+            }
+        },
+        {
+            "start": {
+               "lat": "-36.741667",
+                "lng": "144.55"
+            },
+            "end": {
+                "lat": "-36.85",
+                "lng": "145.05"
+            },
+            "center": {
+                "lat": "-36.666667",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#423feb",
+                "weight": 1
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0, 0 -2, 0",
+                    "strokeOpacity": 1,
+                    "scale": 2
+                },
+                "offset": "0",
+                "repeat": "5px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-37.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-36.666667",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 0,
+                "color": "#0000ff",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0,-1 0,1",
+                    "strokeOpacity": 1,
+                    "scale": 4
+                },
+                "offset": "0",
+                "repeat": "20px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-37.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-37",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path" : "M 0, 0 -2, 0, M 0, 0 2, 0",
+                    "strokeOpacity" : 1,
+                    "scale" : 2,
+                    "strokeColor" : "#f08ee1"
+                },
+                "offset": "0",
+                "repeat": "3px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.35",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-37.35",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-37",
+                "lng": "144.83333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": null,
+                "offset" : 0,
+                "repeat" : 0
+            }
+        },
+
+
+
+
+
+
+        {
+            "start": {
+               "lat": "-37.741667",
+                "lng": "144.55"
+            },
+            "end": {
+                "lat": "-37.85",
+                "lng": "145.05"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#423feb",
+                "weight": 1
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0, 0 -2, 0",
+                    "strokeOpacity": 1,
+                    "scale": 2
+                },
+                "offset": "0",
+                "repeat": "5px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 0,
+                "color": "#0000ff",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0,-1 0,1",
+                    "strokeOpacity": 1,
+                    "scale": 4
+                },
+                "offset": "0",
+                "repeat": "20px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path" : "M 0, 0 -2, 0, M 0, 0 2, 0",
+                    "strokeOpacity" : 1,
+                    "scale" : 2,
+                    "strokeColor" : "#f08ee1"
+                },
+                "offset": "0",
+                "repeat": "3px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.35",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-38.35",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": null,
+                "offset" : 0,
+                "repeat" : 0
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.741667",
+                "lng": "145.55"
+            },
+            "end": {
+                "lat": "-37.85",
+                "lng": "146.05"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "145.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#423feb",
+                "weight": 1
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0, 0 -2, 0",
+                    "strokeOpacity": 1,
+                    "scale": 2
+                },
+                "offset": "0",
+                "repeat": "5px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "145.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "145.5000001"
+            },
+            "center": {
+                "lat": "-37.666667",
+                "lng": "145.63333333"
+            },
+            "line" : {
+                "opacity": 0,
+                "color": "#0000ff",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0,-1 0,1",
+                    "strokeOpacity": 1,
+                    "scale": 4
+                },
+                "offset": "0",
+                "repeat": "20px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.15",
+                "lng": "145.50"
+            },
+            "end": {
+               "lat": "-38.15",
+                "lng": "145.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "145.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path" : "M 0, 0 -2, 0, M 0, 0 2, 0",
+                    "strokeOpacity" : 1,
+                    "scale" : 2,
+                    "strokeColor" : "#f08ee1"
+                },
+                "offset": "0",
+                "repeat": "3px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-38.35",
+                "lng": "145.50"
+            },
+            "end": {
+               "lat": "-38.35",
+                "lng": "145.5000001"
+            },
+            "center": {
+                "lat": "-38",
+                "lng": "145.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": null,
+                "offset" : 0,
+                "repeat" : 0
+            }
+        },
+        {
+            "start": {
+               "lat": "-36.741667",
+                "lng": "144.55"
+            },
+            "end": {
+                "lat": "-36.85",
+                "lng": "145.05"
+            },
+            "center": {
+                "lat": "-36.666667",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#423feb",
+                "weight": 1
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0, 0 -2, 0",
+                    "strokeOpacity": 1,
+                    "scale": 2
+                },
+                "offset": "0",
+                "repeat": "5px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-37.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-36.666667",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 0,
+                "color": "#0000ff",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path": "M 0,-1 0,1",
+                    "strokeOpacity": 1,
+                    "scale": 4
+                },
+                "offset": "0",
+                "repeat": "20px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.15",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-37.15",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-37",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": {
+                    "path" : "M 0, 0 -2, 0, M 0, 0 2, 0",
+                    "strokeOpacity" : 1,
+                    "scale" : 2,
+                    "strokeColor" : "#f08ee1"
+                },
+                "offset": "0",
+                "repeat": "3px"
+            }
+        },
+        {
+            "start": {
+               "lat": "-37.35",
+                "lng": "144.50"
+            },
+            "end": {
+               "lat": "-37.35",
+                "lng": "144.5000001"
+            },
+            "center": {
+                "lat": "-37",
+                "lng": "144.63333333"
+            },
+            "line" : {
+                "opacity": 1,
+                "color": "#000",
+                "weight": 2
+            },
+            "icon" : {
+                "icon": null,
+                "offset" : 0,
+                "repeat" : 0
+            }
+        }
+
+
+
+    ]
+}

@@ -1,0 +1,30 @@
+#map_canvas {
+    height: 750px;
+    width: 750px;
+}
+
+#controls {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#controls li {
+    float: left;
+    margin-left: 10px;
+}
+
+#controls li:first-child {
+    margin-left: 0;
+}
+
+
+#controls li a {
+    color: #000;
+    text-decoration: none;
+}
+
+#controls li a:hover, #controls li a:focus, #controls li a:active {
+    text-decoration: underline;
+}
