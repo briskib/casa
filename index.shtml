@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="utf-8" />
+
+    <title>CASA Prototype</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+
+    <meta name="robots" content="noydir" />
+    <meta name="robots" content="noodp" />
+
+    <script type="text/javascript" src="../js/modernizr.js"></script>
+
+    <link rel="icon" href="../img/favicon.ico" />
+    <link rel="SHORTCUT ICON" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" type="text/css" href="../css/1.css" />
+
+</head>
+<body>
+
+    <div id="map_canvas" class="bp bp3 bp4"><div id="map"></div></div>
+
+    <ul id="controls">
+        <li><a href="#" class="clear">Clear Overlays</a></li>
+        <li><a href="#" class="image">Show Plain Image</a></li>
+        <li><a href="#" class="curve">Show Curve</a></li>
+        <li><a href="http://stillraining.com/golf-courses.kml" class="kml">Show golf courses</a></li>
+        <li><a href="http://stillraining.com/iceland.kml" class="kml">Show Iceland KML Plotting</a></li>
+        <li><a href="http://stillraining.com/australia2.kml" class="kml">Show National Airspace KML Plotting</a></li>
+        <li><a href="http://stillraining.com/australia6.kml" class="kml">Show Melbourne KML Plotting</a></li>
+        <li><a href="https://developers.google.com/kml/documentation/KML_Samples.kml" class="kml">Show US KML Plotting</a></li>
+    </ul>
+
+
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/vj-global.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready( function() {
+            Casa.Core.run();
+        });
+    </script>
+</body>
+</html>

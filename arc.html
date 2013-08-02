@@ -1,0 +1,208 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Google Maps JavaScript API v3 Example: Polygon Arc</title>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://www.geocodezip.com/scripts/v3_epoly.js"></script>
+<script type="text/javascript">
+
+    var EarthRadiusMeters = 6378137.0; // meters
+
+    google.maps.LatLng.prototype.DestinationPoint = function (brng, dist) {
+        var R = EarthRadiusMeters; // earth's mean radius in meters
+        var brng = brng.toRad();
+        var lat1 = this.lat().toRad(), lon1 = this.lng().toRad();
+        var lat2 = Math.asin( Math.sin(lat1)*Math.cos(dist/R) +
+                          Math.cos(lat1)*Math.sin(dist/R)*Math.cos(brng) );
+        var lon2 = lon1 + Math.atan2(Math.sin(brng)*Math.sin(dist/R)*Math.cos(lat1),
+                                 Math.cos(dist/R)-Math.sin(lat1)*Math.sin(lat2));
+
+        return new google.maps.LatLng(lat2.toDeg(), lon2.toDeg());
+    }
+
+    // === A function which returns the bearing between two LatLng in radians ===
+    // === If v1 is null, it returns the bearing between the first and last vertex ===
+    // === If v1 is present but v2 is null, returns the bearing from v1 to the next vertex ===
+    // === If either vertex is out of range, returns void ===
+    google.maps.LatLng.prototype.Bearing = function(otherLatLng) {
+        var from = this;
+        var to = otherLatLng;
+        if (from.equals(to)) {
+        return 0;
+        }
+        var lat1 = from.latRadians();
+        var lon1 = from.lngRadians();
+        var lat2 = to.latRadians();
+        var lon2 = to.lngRadians();
+        var angle = - Math.atan2( Math.sin( lon1 - lon2 ) * Math.cos( lat2 ), Math.cos( lat1 ) * Math.sin( lat2 ) - Math.sin( lat1 ) * Math.cos( lat2 ) * Math.cos( lon1 - lon2 ) );
+        if ( angle < 0.0 ) angle  += Math.PI * 2.0;
+        if ( angle > Math.PI ) angle -= Math.PI * 2.0;
+        return parseFloat(angle.toDeg());
+    }
+
+
+    /**
+     * Extend the Number object to convert degrees to radians
+     *
+     * @return {Number} Bearing in radians
+     * @ignore
+     */
+    Number.prototype.toRad = function () {
+        return this * Math.PI / 180;
+    };
+
+    /**
+     * Extend the Number object to convert radians to degrees
+     *
+     * @return {Number} Bearing in degrees
+     * @ignore
+     */
+    Number.prototype.toDeg = function () {
+        return this * 180 / Math.PI;
+    };
+
+    /**
+     * Normalize a heading in degrees to between 0 and +360
+     *
+     * @return {Number} Return
+     * @ignore
+     */
+    Number.prototype.toBrng = function () {
+        return (this.toDeg() + 360) % 360;
+    };
+
+    var infowindow = new google.maps.InfoWindow({
+        size: new google.maps.Size(150,50)
+    });
+
+
+    function createMarker(latlng, html) {
+        var contentString = html;
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            zIndex: Math.round(latlng.lat()*-100000)<<5
+        });
+
+        bounds.extend(latlng);
+
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent(contentString);
+            infowindow.open(map,marker);
+        });
+    }
+
+
+
+    function drawArc(center, initialBearing, finalBearing, radius) {
+        var d2r = Math.PI / 180;   // degrees to radians
+        var r2d = 180 / Math.PI;   // radians to degrees
+
+        var points = 32;
+
+       // find the raidus in lat/lon
+        var rlat = (radius / EarthRadiusMeters) * r2d;
+        var rlng = rlat / Math.cos(center.lat() * d2r);
+
+        var extp = new Array();
+
+        if (initialBearing > finalBearing) {
+            finalBearing += 360;
+        }
+
+        var deltaBearing = finalBearing - initialBearing;
+
+        deltaBearing = deltaBearing/points;
+        for (var i=0; (i < points+1); i++)
+        {
+            extp.push(center.DestinationPoint(initialBearing + i*deltaBearing, radius));
+            bounds.extend(extp[extp.length-1]);
+        }
+
+        return extp;
+   }
+
+    function drawCircle(point, radius) {
+        var d2r = Math.PI / 180;   // degrees to radians
+        var r2d = 180 / Math.PI;   // radians to degrees
+        var EarthRadiusMeters = 6378137.0; // meters
+        var earthsradius = 3963; // 3963 is the radius of the earth in miles
+        var points = 32;
+
+        // find the raidus in lat/lon
+
+        var rlat = (radius / EarthRadiusMeters) * r2d;
+        var rlng = rlat / Math.cos(point.lat() * d2r);
+
+        var extp = new Array();
+
+        for (var i=0; i < points+1; i++) // one extra here makes sure we connect the
+        {
+            var theta = Math.PI * (i / (points/2));
+            ey = point.lng() + (rlng * Math.cos(theta)); // center a + radius x * cos(theta)
+            ex = point.lat() + (rlat * Math.sin(theta)); // center b + radius y * sin(theta)
+            extp.push(new google.maps.LatLng(ex, ey));
+            bounds.extend(extp[extp.length-1]);
+        }
+
+       return extp;
+   }
+
+    var map = null;
+    var bounds = null;
+
+    function initialize() {
+        var myOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(-33.9, 151.2),
+            mapTypeControl: true,
+            mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+            navigationControl: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+        bounds = new google.maps.LatLngBounds();
+
+        google.maps.event.addListener(map, 'click', function() {
+            infowindow.close();
+        });
+
+            var startPoint = new google.maps.LatLng(-38.15, 144.50),
+                endPoint = new google.maps.LatLng(-38.15, 144.500001),
+                centerPoint = new google.maps.LatLng(-37.666667, 144.83333333);
+
+        createMarker(startPoint,"start: "+startPoint.toUrlValue(6)+"<br>distance to center: "+(centerPoint.distanceFrom(startPoint)/1000).toFixed(3)+" km<br>Bearing: "+centerPoint.Bearing(startPoint)+"<br><a href='javascript:map.setCenter(new google.maps.LatLng("+startPoint.toUrlValue(6)+"));map.setZoom(20);'>zoom in</a> - <a href='javascript:map.fitBounds(bounds);'>zoom out</a>");
+
+        createMarker(endPoint,"end: "+endPoint.toUrlValue(6)+"<br>distance to center: "+(centerPoint.distanceFrom(endPoint)/1000).toFixed(3)+" km<br>Bearing: "+centerPoint.Bearing(endPoint)+"<br><a href='javascript:map.setCenter(new google.maps.LatLng("+endPoint.toUrlValue(6)+"));map.setZoom(20);'>zoom in</a> - <a href='javascript:map.fitBounds(bounds);'>zoom out</a>");
+
+        createMarker(centerPoint,"center: "+centerPoint.toUrlValue(6));
+
+        var arcPts = drawArc(centerPoint, centerPoint.Bearing(startPoint), centerPoint.Bearing(endPoint), centerPoint.distanceFrom(startPoint));
+        // add the start and end lines
+        arcPts.push(centerPoint);
+        bounds.extend(centerPoint);
+        arcPts.push(startPoint);
+
+        var piePoly = new google.maps.Polygon({
+                 paths: [arcPts],
+                 strokeColor: "#00FF00",
+                 strokeOpacity: 0.5,
+                 strokeWeight: 2,
+                 fillColor: "#FF0000",
+                 fillOpacity: 0.35,
+                 map: map
+     });
+
+    map.fitBounds(bounds);
+
+}
+
+</script>
+</head>
+<body style="margin:0px; padding:0px;" onload="initialize()">
+  <div id="map_canvas" style="width:75%; height:75%"></div>
+</body>
+</html>

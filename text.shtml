@@ -1,0 +1,34 @@
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAGbZjXr2wr7dT2P3O5pNo5wvVF3JiaopU&sensor=false"
+          type="text/javascript"></script>
+  <script type="text/javascript">
+
+  function initialize() {
+    //You don't need to use GBrowserIsCompatible, it's only for V2 of the API
+    //if (GBrowserIsCompatible()) {
+      //You need to set up options for the map that you reference when you
+      //instantiate the map object
+      var myOptions = {
+                center: new google.maps.LatLng(-18.975750, 32.669184),
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+              };
+      //Your code references google.maps.MAP; it's google.maps.Map
+      var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+      var imageBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-19.000417,30.999583),
+        new google.maps.LatLng(-17.999583,32.000417));
+
+      var oldmap = new google.maps.GroundOverlay(
+        "http://www.earthstation.mobi/cloakpS19E031.png",imageBounds);
+        oldmap.setMap(map);
+   //} <--Your code was missing this closing bracket for the conditional
+       //But the conditional is not even needed, since GBrowserCompatible is a V2 thing
+  }
+
+  </script>
+  </head>
+   <body onload="initialize()">
+  <div id="map_canvas" style="width: 1500px; height: 900px"></div>
+   </body>
+   </html>
